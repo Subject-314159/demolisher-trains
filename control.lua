@@ -650,13 +650,13 @@ local set_demolisher_killed = function(force)
     if not storage.forces then
         storage.forces = {}
     end
-    storage.forces(force.index).killed_demolisher = true
+    storage.forces[force.index].killed_demolisher = true
 end
 local get_demolisher_killed = function(force)
     if not storage.forces then
         storage.forces = {}
     end
-    return storage.forces(force.index).killed_demolisher
+    return storage.forces[force.index].killed_demolisher
 end
 
 -- Research handling
