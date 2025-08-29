@@ -1,0 +1,49 @@
+-- local default_masks = require("collision-mask-defaults")
+-- local masks_are_same = function(mask1, mask2)
+--     for layer, mask1_layers_layer in pairs(mask1.layers or {}) do
+--         if mask1_layers_layer and (mask2.layers and not mask2.layers[layer]) then
+--             return false;
+--         end
+--     end
+--     for layer, mask2_layers_layer in pairs(mask2.layers or {}) do
+--         if mask2_layers_layer and (mask1.layers and not mask1.layers[layer]) then
+--             return false;
+--         end
+--     end
+--     return true
+-- end
+-- local masks_collide = function(mask1, mask2)
+--     if mask1.not_colliding_with_itself and mask2.not_colliding_with_itself and masks_are_same(mask1, mask2) then
+--         return false
+--     end
+--     for layer, mask1_layers_layer in pairs(mask1.layers or {}) do
+--         if mask1_layers_layer and mask2.layers and mask2.layers[layer] then
+--             return true;
+--         end
+--     end
+--     return false
+-- end
+-- local collect_prototypes_colliding_with_mask = function(mask)
+--     local prototype_list = {}
+--     local check_list = default_masks
+--     if mask.colliding_with_tiles_only then
+--         check_list = {
+--             tile = {}
+--         }
+--     end
+--     for type, default_mask in pairs(check_list) do
+--         if data.raw[type] then
+--             for name, entity in pairs(data.raw[type]) do
+--                 local entity_mask = entity.collision_mask or default_mask
+--                 if masks_collide(entity_mask, mask) then
+--                     table.insert(prototype_list, entity)
+--                 end
+--             end
+--         end
+--     end
+--     return prototype_list
+-- end
+-- local prototypes = collect_prototypes_colliding_with_mask("train")
+-- for _, p in pairs(prototypes) do
+--     p.collision_mask.layers["demolisher-train"] = true
+-- end
