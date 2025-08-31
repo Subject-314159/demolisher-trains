@@ -2,6 +2,8 @@
 
 This mod adds Demolishers as trains.
 
+![](https://github.com/Subject-314159/demolisher-trains/raw/refs/heads/main/graphics/trailer/DemoliserTrain.mp4)
+
 USE AT YOUR OWN RISK! The mod creator denies all liability if the user experiences a sudden stroke when confusing a Demolisher Train for an actual Demolisher!
 
 _Why this mod_
